@@ -39,8 +39,9 @@ export default function ServiceSection() {
   const[videoOpen, setVideoOpen]= useState(false);
   const handleClick = (e) => {
     e.preventDefault();
-
-    setVideoOpen(true);
+    if (typeof window !== "undefined") {
+      setVideoOpen(true);
+    }
   }
   return (
     <section sx={{variant: "section.services"}}>

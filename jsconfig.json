@@ -1,5 +1,15 @@
 {
   "compilerOptions": {
     "baseUrl": "src"
-  }
+  },
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "throwIfNamespace": false, // defaults to true
+        "runtime": "classic", // defaults to classic
+        "importSource": "theme-ui" // defaults to react
+      }
+    ]
+  ]
 }
